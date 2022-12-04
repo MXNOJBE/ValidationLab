@@ -45,7 +45,15 @@ label1{
 
 }
   </style>
-
+  <script>
+    function validateForm() {
+      let x = document.forms["myForm"]["fname"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    }
+    </script>
   <head>
     <br />
     <br />
@@ -57,7 +65,7 @@ label1{
     <br/>
     <br>
     <div class ="form">
-      <form name="Form1"></form>
+      <form name="Form1" action="/action_page.php" onsubmit="return validateForm()" method="post">
       <label for="fname">First name:</label><br>
       <input type="text" id="fname" name="fname" value="John"><br>
       <label for="lname">Last name:</label><br>
