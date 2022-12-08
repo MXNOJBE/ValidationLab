@@ -1,0 +1,191 @@
+<head>
+    <title>CODEMI-profile page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="editprofile.css">
+  </head>
+  <body>
+    <header>
+      <div class="tb">
+        <div class="td" id="logo">
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+        </div>
+        <div class="td" id="search-form">
+          <form method="get" action="#">
+            <input type="text" placeholder="Search Projects">
+            <button type="submit"><i class="material-icons">search</i></button>
+          </form>
+        </div>
+        <div class="td" id="f-name-l"><span>Codemia</span></div>
+        <div class="td" id="i-links">
+          <div class="tb">
+            <div class="td" id="m-td">
+              <div class="tb">
+                <span class="td"><i class="material-icons">person_add</i></span>
+                <span class="td"><i class="material-icons">chat_bubble</i></span>
+                <span class="td m-active"><i class="material-icons">notifications</i></span>
+              </div>
+            </div>
+            <div class="td">
+              <a href="#" id="p-link">
+                <img src="https://img.icons8.com/office/512/person-male.png">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="profile-upper">
+      <div id="profile-banner-image">
+    <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/185188120/original/b084c38d746e1cc36e133e7557c06c4e47a45198/create-responsive-websites-using-html-css-javascript-react.jpeg" alt="Banner image">
+      </div>
+      <div id="profile-d">
+        <div id="profile-pic">
+          <img src="https://img.icons8.com/office/512/person-male.png">
+        </div>
+        <div id="username-main"><br>Test User</div>
+        <div class="tb" id="m-btns">
+          <div class="td">
+            <div class="m-btn"><i class="material-icons">format_list_bulleted</i><span>Activity log</span></div>
+          </div>
+          <div class="td">
+            <div class="m-btn" onclick="window.location='editprofile.html'"><i class="material-icons">create</i><span>Edit Profile</span></div>
+          </div>
+        </div>
+        <div id="edit-profile"><i class="material-icons">camera_alt</i></div>
+      </div>
+      <div id="black-grd"></div>
+    </div>
+    <div id="main-content">
+      <div class="tb">
+        <div class="td" id="l-col">
+          <div class="l-cnt">
+            <div class="cnt-label">
+              <i class="l-i" id="l-i-i"></i>
+              <span>Intro</span>
+              <div class="lb-action"><i class="material-icons">edit</i></div>
+            </div>
+            <div id="i-box">
+              <div id="intro-line">Front-end Engineer</div>
+              <div id="u-occ">I love making applications with Angular.</div>
+              <div id="u-loc" onclick = "getLocation()" ><i class="material-icons">location_on</i><a href="#">Bengaluru</a>, <a href="#">India</a></div>
+            </div>
+          </div>
+          <div class="l-cnt l-mrg">
+            <div class="cnt-label">
+              <i class="l-i" id="l-i-p"></i>
+              <span>Repositories</span>
+              <div class="lb-action" id="b-i"><i class="material-icons"></i></div>
+            </div>
+            <div id="Repositories">
+              <div class="tb">
+                <div class="tr">
+                  <div class="td"></div>
+                  <div class="td"></div>
+                  <div class="td"></div>
+                </div>
+                <div class="tr">
+                  <div class="td"></div>
+                  <div class="td"></div>
+                  <div class="td"></div>
+                </div>
+                <div class="tr">
+                  <div class="td"></div>
+                  <div class="td"></div>
+                  <div class="td"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-cnt l-mrg">
+            <div class="cnt-label">
+              <i class="l-i" id="l-i-k"></i>
+              <span>Questions<i id="k-nm">1</i></span>
+            </div>
+            <div>
+              <div class="q-ad-c">
+                <a href="#" class="q-ad">
+                <span>What is the error code 404?<i id="k-nm"></i></span>
+                <br><span>What are Attributes in HTML??<i id="k-nm"></i></span>
+                <br><span>What is an Anchor tag in HTML?<i id="k-nm"></i></span>
+                </a>
+              </div>
+              <div class="q-ad-c">
+                <a href="#" class="q-ad" id="add_q">
+                  <i class="material-icons">add</i>
+                  <span>Add Answer</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="t-box">
+            <a href="#">Privacy</a> <a href="#">Terms</a> <a href="#">Advertising</a> <a href="#">Ad Choices</a> <a href="#">Cookies</a> <span id="t-more">More<i class="material-icons">arrow_drop_down</i></span>
+            <div id="cpy-nt"> &copy; <span id="curr-year"></span></div>
+          </div>
+        </div>
+        <div class="td" id="m-col">
+          <div class="page_options" id="p-tabs">
+            <div class="tb">
+              <div class="td">
+                <div class="tb" id="p-tabs-m">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="tb">
+            </div>
+            <div class="card">
+                <div class="form">
+                    
+                    <form  name="Form" onsubmit="return validateForm()" method="get">
+                        <div class="row">
+                        <div class="col">
+                        <label >Name</label><br>
+                        <input type="text" name="" id="name"/>
+                        </div><br>
+                        <div class="col"><label >Username</label><br/>
+                         <input type="text" name="" id="name"/></div>
+                        </div>
+                        <div class="row">
+                        <div class="col">
+                            <label >Phone Number</label><br/>
+                        <input type="number" name="" id="name"/><br>
+                        </div>
+                        <div class="col">
+                        <label >Email</label><br/>
+                        <input type="mail" name="" id="name"/><br>
+                        </div>
+                        </div>
+                        
+                        <div class="row">
+                        <div class="col">
+                            <label >Date of Birth</label><br/>
+                        <input type="date" name="" id="name"/><br>
+                        </div>
+                        <div class="col">
+                            <label >Experience (Yrs)</label><br/>
+                        <input type="number" name="" id="name"/><br>
+                        </div>
+                        </div>
+                        
+                        <div class="row">
+                           <div class="col">
+                             <label >Qualification</label><br/>
+                        <input type="text" name="" id="name"/><br>
+                           </div>
+                    
+                        </div>
+                        
+                        <input type="submit" value="Submit" id="submit">
+                        <input type="reset" value="Reset" id="submit">
+                    </form>
+                </div>
+                
+            </div>
+           </div>
+            <div>
+            </div>
+          </div>
+        </div>
+    
+   
