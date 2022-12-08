@@ -2,6 +2,7 @@
     <title>CODEMI-profile page</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="editprofile.css">
+    <script src="./index.js"></script>
   </head>
   <body>
     <header>
@@ -136,56 +137,40 @@
             </div>
             <div class="card">
                 <div class="form">
-                    
-                    <form  name="Form" onsubmit="return validateForm()" method="get">
-                        <div class="row">
-                        <div class="col">
-                        <label >Name</label><br>
-                        <input type="text" name="" id="name"/>
+                    <h1>Edit Profile</h1>
+                    <form  name="Form" onsubmit="return validateForm()" method="get">                                                 
+                      <div>
+                        <label>Name</label><br/>
+                        <input type="text" name="" id="username" class="name"/>
                         </div><br>
-                        <div class="col"><label >Username</label><br/>
-                         <input type="text" name="" id="name"/></div>
-                        </div>
-                        <div class="row">
-                        <div class="col">
-                            <label >Phone Number</label><br/>
-                        <input type="number" name="" id="name"/><br>
-                        </div>
-                        <div class="col">
+                        <div>
+
+                       <label >Password</label><br>
+                         <input type="password" name="" class="name" id="password"/>
+                        </div><br>
+                        <div>
+                            
+                        <label >Phone Number</label><br/>
+                        <input type="number" name="" id="phnum" class="name"/><br>
+                        </div><br>
+
+                        <div>
                         <label >Email</label><br/>
-                        <input type="mail" name="" id="name"/><br>
-                        </div>
-                        </div>
-                        
-                        <div class="row">
-                        <div class="col">
-                            <label >Date of Birth</label><br/>
-                        <input type="date" name="" id="name"/><br>
-                        </div>
-                        <div class="col">
-                            <label >Experience (Yrs)</label><br/>
-                        <input type="number" name="" id="name"/><br>
-                        </div>
-                        </div>
-                        
-                        <div class="row">
-                           <div class="col">
-                             <label >Qualification</label><br/>
-                        <input type="text" name="" id="name"/><br>
-                           </div>
-                    
-                        </div>
-                        
-                        <input type="submit" value="Submit" id="submit">
-                        <input type="reset" value="Reset" id="submit">
+                        <input type="mail" name="" id="email" class="name"/><br>
+                        </div><br>
+                      <div>
+                      <label>Qualification</label><br/>
+                      <input type="text" name="" id="qual"class="name"/><br>
+                        </div><br>
+                        <input type="submit" value="Submit" class="submit" id="sub" onclick="validate()">
+                        <input type="reset" value="Reset" class="submit">
                     </form>
                 </div>
                 
             </div>
            </div>
-            <div>
-            </div>
+            
           </div>
         </div>
-    
-   
+          </div>
+        </div>
