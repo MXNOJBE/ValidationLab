@@ -158,19 +158,71 @@
                         <label >Email</label><br/>
                         <input type="mail" name="" id="email" class="name"/><br>
                         </div><br>
-                      <div>
-                      <label>Qualification</label><br/>
-                      <input type="text" name="" id="qual"class="name"/><br>
-                        </div><br>
+                    
                         <input type="submit" value="Submit" class="submit" id="sub" onclick="validate()">
                         <input type="reset" value="Reset" class="submit">
+                        <input type="submit" value="Store cookie" class="submit" onclick="WriteCookie()" id="button">
+                        <input type="submit" value="Get cookie" class="submit" onclick="ReadCookie()" id="button">
+                        <input type="submit" value="Save to server" class="submit" onclick="save_data()" id="button">
+                        <input type="submit" value="Delete cookie" class="submit" onclick="DelCookie()" id="button">
                     </form>
-                </div>
-                
-            </div>
-           </div>
-            
-          </div>
-        </div>
-          </div>
-        </div>
+        <script>
+
+          function save_data() {
+            var input = document.getElementById('saveServer').value;
+            localStorage.setItem('server', input);
+            document.getElementById('saveServer').value = localStorage.getItem('server');
+        }
+        
+        function WriteCookie() 
+    {
+        var username=document.getElementById("username").value;
+        var email=document.getElementById("email").value;
+        var pass=document.getElementById("password").value;
+        var phone=document.getElementById("phnum").value;
+        var now = new Date();
+        now.setMonth( now.getMonth() + 1 );
+
+        document.cookie="RegId = "+username;
+        document.cookie="Email = "+email;
+        document.cookie="Password = "+pass;
+        document.cookie="PhoneNumber = "+phone;
+        document.cookie = "expires=" + now.toUTCString() + ";"
+        window.alert("Cookie Added");
+               
+    }
+    function ReadCookie() {
+      var allcookies = document.cookie;
+      
+      // Get all the cookies pairs in an array
+      cookiearray = allcookies.split(';');
+      
+      // Now take key value pair out of this array
+      for(var i=0; i<cookiearray.length; i++) {
+         name = cookiearray[i].split('=')[0];
+         value = cookiearray[i].split('=')[1];
+         document.write ( name + "  :  " + value+"<br/>");
+         
+      }
+   }
+   function DelCookie()
+     {
+        if(document.cookie!="")
+        {
+            document.cookie="";
+            var reg=document.getElementById("username").value;
+            var email=document.getElementById("email").value;
+            var pass=document.getElementById("password").value;
+            var now = new Date();
+            now.setMonth( now.getMonth() - 1 );
+
+            document.cookie="Username = "+"";
+            document.cookie="Email = "+"";
+            document.cookie="Password = "+"";
+            document.cookie = "expires=" + now.toUTCString() + ";"
+            window.alert("Cookie Deleted");
+
+        }
+        
+     }
+        </script>
